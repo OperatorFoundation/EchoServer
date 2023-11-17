@@ -27,10 +27,12 @@ class ConnectionHandler: ChannelInboundHandler
         print("ConnectionHandler.channelRead")
 
         print("Data received from the client. Echoing received message back.")
-        
+
+        print("ConnectionHandler.channelRead - writing")
+
         context.write(data, promise: nil)
 
-        print("ConnectionHandler.channelRead")
+        print("ConnectionHandler.channelRead - wrote")
 
         messageCount += 1
     }
