@@ -24,14 +24,20 @@ class ConnectionHandler: ChannelInboundHandler
     /// Called when data has been received from the client
     public func channelRead(context: ChannelHandlerContext, data: NIOAny)
     {
+        print("ConnectionHandler.channelRead")
+
         print("Data received from the client. Echoing received message back.")
         
         context.write(data, promise: nil)
+
+        print("ConnectionHandler.channelRead")
+
         messageCount += 1
     }
     
     public func channelReadComplete(context: ChannelHandlerContext) 
     {
+        print("ConnectionHandler.channelReadComplete")
         context.flush()
     }
     
