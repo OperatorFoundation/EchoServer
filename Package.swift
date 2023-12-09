@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "EchoServer",
     dependencies: [
-        .package(url: "git@github.com:apple/swift-argument-parser.git", from: "1.2.3"),
-        .package(url: "git@github.com:apple/swift-nio.git", from: "2.61.1")
+        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.3"),
+        .package(url: "https://github.com/apple/swift-nio.git", from: "2.61.1")
     ],
     targets: [
         .executableTarget(
